@@ -41,12 +41,12 @@
     <div class="social-media">
         <div class="container">
             <!-- Social Media -->
-            <div class="mdi-set">
-                <span class="mdi-facebook"></span>
-                <span class="mdi-youtube"></span>
-                <span class="mdi-instagram"></span>
-                <span class="mdi-pinterest"></span>
-                <span class="mdi-twitter-circle"></span>
+            <div class="icon-set">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
             </div>
         </div>
         <div class="clearfix"></div>
