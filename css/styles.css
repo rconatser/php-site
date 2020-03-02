@@ -78,10 +78,8 @@ a:target {
     margin: 0 auto;
 }
 
-.clearfix::after {
-    content: "";
+.clearfix {
     clear: both;
-    display: table;
 }
 
 /* Header Styles */
@@ -99,8 +97,17 @@ a:target {
     text-decoration: none;
 }
 
+.header .logo img {
+    max-width: 250px;
+}
+
 
 /* Nav */
+.nav li#dropdown .fa-chevron-down {
+    font-size: 1.25rem;
+    padding-left: 5px;
+}
+
 .nav ul#main {
     display: none;
 }
@@ -322,7 +329,7 @@ footer .social-media {
     padding: 15px;
 }
 
-footer .social-media .mdi-set {
+footer .social-media .icon-set {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -330,45 +337,45 @@ footer .social-media .mdi-set {
     flex-direction: row;
 }
 
-footer .social-media .mdi-set span {
-    font-size: 3rem;
+footer .social-media .icon-set i {
+    font-size: 2rem;
     margin: 0 10px;
     transition: 0.2s ease all;
 }
 
-footer .social-media .mdi-set span:hover,
-footer .social-media .mdi-set span:target,
-footer .social-media .mdi-set span:focus {
+footer .social-media .icon-set i:hover,
+footer .social-media .icon-set i:target,
+footer .social-media .icon-set i:focus {
     cursor: pointer;
 }
 
-footer .social-media .mdi-set span.mdi-facebook:hover,
-footer .social-media .mdi-set span.mdi-facebook:target,
-footer .social-media .mdi-set span.mdi-facebook:focus {
+footer .social-media .icon-set .fa-facebook:hover,
+footer .social-media .icon-set .fa-facebook:target,
+footer .social-media .icon-set .fa-facebook:focus {
     color: #3B5998;
 }
 
-footer .social-media .mdi-set span.mdi-youtube:hover,
-footer .social-media .mdi-set span.mdi-youtube:target,
-footer .social-media .mdi-set span.mdi-youtube:focus {
+footer .social-media .icon-set .fa-youtube-play:hover,
+footer .social-media .icon-set .fa-youtube-play:target,
+footer .social-media .icon-set .fa-youtube-play:focus {
     color: #ff0000;
 }
 
-footer .social-media .mdi-set span.mdi-instagram:hover,
-footer .social-media .mdi-set span.mdi-instagram:target,
-footer .social-media .mdi-set span.mdi-instagram:focus {
+footer .social-media .icon-set .fa-instagram:hover,
+footer .social-media .icon-set .fa-instagram:target,
+footer .social-media .icon-set .fa-instagram:focus {
     color: #8134af;
 }
 
-footer .social-media .mdi-set span.mdi-twitter-circle:hover,
-footer .social-media .mdi-set span.mdi-twitter-circle:target,
-footer .social-media .mdi-set span.mdi-twitter-circle:focus {
+footer .social-media .icon-set .fa-twitter:hover,
+footer .social-media .icon-set .fa-twitter:target,
+footer .social-media .icon-set .fa-twitter:focus {
     color: #55acee;
 }
 
-footer .social-media .mdi-set span.mdi-pinterest:hover,
-footer .social-media .mdi-set span.mdi-pinterest:target,
-footer .social-media .mdi-set span.mdi-pinterest:focus {
+footer .social-media .icon-set .fa-pinterest-p:hover,
+footer .social-media .icon-set .fa-pinterest-p:target,
+footer .social-media .icon-set .fa-pinterest-p:focus {
     color: #BD081C;
 }
 
@@ -456,13 +463,17 @@ form input[type="submit"]:focus {
 }
 .search form button {
     width: 20px;
-    padding: 5px 5px 5px 0;
+    padding: 2px 5px 5px 0;
     margin-left: -45px;
     font-size: 24px;
     color: rgb(201, 201, 201);
     background: none;
     border: none;
     transition: 0.2s ease all;
+}
+
+.search form button .fa {
+    font-size: 1.25rem;
 }
 
 .search form button:hover, .search form button:focus, .search form button:target {
@@ -483,6 +494,10 @@ form input[type="submit"]:focus {
         justify-content: space-between;
     }
 
+    .header .logo img {
+        max-width: 175px;
+    }
+
 }
 
 /* End Tablet and Up Styles */
@@ -496,6 +511,18 @@ form input[type="submit"]:focus {
     }
 
     /* Nav */
+    .nav .fa-chevron-down {
+        font-size: 1rem;
+        padding: 0 5px;
+        transition: 0.2s ease-in-out all;
+    }
+    
+    .nav li#dropdown:hover .fa-chevron-down, 
+    .nav li#dropdown:target .fa-chevron-down, 
+    .nav li#dropdown:focus .fa-chevron-down {
+        transform: rotate(180deg);
+    }
+
     .nav ul#main {
         display: flex;
         justify-content: flex-start;

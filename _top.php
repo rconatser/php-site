@@ -29,7 +29,7 @@
 <section class="navigation">
     <div class="nav">
         <div class="container">
-            <ul id="main">
+            <ul id="main" class="menu">
                 <a href="index.php">
                     <li>Home</li>
                 </a>
@@ -37,7 +37,7 @@
                     <li>Cruises</li>
                 </a>
                 <li id="dropdown">Agents <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                    <ul id="sub">
+                    <ul id="sub" class="menu">
                         <a href="#"><li>Item One</li></a>
                         <a href="#"><li>Item Two</li></a>
                     </ul>
@@ -46,7 +46,7 @@
                     <li>Book</li>
                 </a>
             </ul>
-            <ul id="mobile">
+            <ul id="mobile" class="menu">
                 <a id="hamburgerBtn" class="" href="#"></a>
                 <a href="index.php">
                     <li>Home</li>
@@ -55,7 +55,7 @@
                     <li>Cruises</li>
                 </a>
                 <li id="dropdown">Agents <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                    <ul id="sub">
+                    <ul id="sub" class="menu">
                         <a href="#"><li>Item One</li></a>
                         <a href="#"><li>Item Two</li></a>
                     </ul>
