@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css?family=Kristi|Montserrat|Raleway&display=swap');
+
+/* Reset */
+html {
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+/* Custom Column sizing */
+.col-12,
+.col-sm-6,
+.col-md-4,
+.col-lg-3 {
+    margin: 0;
+    padding: 20px;
+    display: inline-block;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+/* Font and Logo Styles */
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    color: #003A6E;
+    padding: 10px 0;
+    letter-spacing: 1.5px;
+}
+
+p {
+    padding-bottom: 10px;
+}
+
+a {
+    font-weight: 800;
+    text-decoration: underline dotted;
+    color: #0080E2;
+    transition: 0.2s ease all;
+}
+
+a:hover,
+a:focus,
+a:target {
+    color: #00467C;
+}
+
+/* General Styles */
+.bg-grey-dark {
+    background-color: #161616;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Header Styles */
+.header .container {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 40px;
+}
+
+.header .num {
+    font-size: 22px;
+    text-decoration: none;
+}
+
+
+/* Nav */
+.nav ul#main {
+    display: none;
+}
+
+.nav, .nav ul#sub {
+    background-color: rgb(0, 24, 46);
+    width: 100%;
+    overflow: hidden;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav li {
+    color: white;
+    font-weight: 300;
+    border-bottom: 4px solid rgb(0, 24, 46);
+    border-top: 4px solid rgb(0, 24, 46);
+}
+
+.nav li:hover,
+.nav li:focus,
+.nav li:target {
+    background-color: #0080E2;
+    border-color: #0080E2;
+}
+
+.nav li.active {
+    border-bottom-color: #0080E2;
+}
+
+.nav ul#mobile {
+    background-color: rgb(0, 24, 46);
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+}
+
+a#hamburgerBtn {
+    display: block;
+    width: 5rem;
+    height: 3rem;
+    background-color: transparent;
+    background-image: url("../images/open.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: .1s ease-in-out all;
+}
+
+.nav ul#mobile li {
+    display: none;
+}
+
+a#hamburgerBtn:hover {
+    cursor: pointer;
+}
+
+.nav ul#mobile.open {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.nav ul#mobile.open #hamburgerBtn {
+    transform: rotate(90deg);
+    background-image: url("../images/close.png");
+}
+
+.nav ul#mobile.open li {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 24px;
+}
+
+.nav ul#mobile.open #dropdown {
+    padding: 15px 0 0;
+    margin: 0;
+    width: 100%;
+}
+
+.nav ul#mobile.open li#dropdown:hover, .nav ul#mobile.open li#dropdown:focus, .nav ul#mobile.open li#dropdown:target {
+    background-color: rgb(0, 24, 46);
+}
+
+.nav ul#mobile.open ul#sub li {
+    font-size: 18px;
+}
+
+.nav ul#mobile.open ul#sub li:before {
+    content: '- ';
+}
+
+
+/* SLICK Custom Styles (Override) */
+.imgs {
+    padding-bottom: 40px;
+}
+
+.slider {
+    margin-bottom: 20px;
+    height: auto;
+}
+
+.imgs h1 {
+    text-align: center;
+    font-size: 32px;
+}
+
+.imgs h1 span {
+    font-size: 42px;
+    font-family: 'Kristi', sans-serif;
+    color: #0080E2;
+    border-bottom: 2px solid #0080E2;
+}
+
+.slider img {
+    width: 100%;
+}
+
+/* Card Styles */
+.cards {
+    background-color: #f7f7f7;
+    padding: 60px 20px 80px
+}
+
+.cards h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cards .card-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cards .card-container a {
+    opacity: 75%;
+    transition: 0.2s ease all;
+
+    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+    width: 48%;
+    margin: 10px 1%;
+    height: 350px;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+.cards .card-container a:hover, .cards .card-container a:target, .cards .card-container a:focus {
+    opacity: 100%;
+    cursor: pointer;
+}
+
+.cards a#card-one {
+    background-image: url("../images/sunset-cruise.jpg");
+}
+
+.cards a#card-two {
+    background-image: url("../images/blue-scene-cruise.jpg");
+}
+
+.cards a#card-three {
+    background-image: url("../images/wine-cruise.jpg");
+}
+
+.cards a#card-four {
+    background-image: url("../images/side-boat.jpg");
+}
+
+.cards a .text {
+    background-color: rgba(0,0,0,.5);
+    color: white;
+    width: 100%;
+    padding: 20px;
+}
+
+.cards a .text h3 {
+    color: white;
+    font-size: 20px;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #D6EDF8;
+    /* Light teal */
+    color: black;
+}
+
+footer .container div {
+    float: left;
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+footer .social-media {
+    background-color: #000B14;
+    /* Really deep blue */
+    color: white;
+    padding: 15px;
+}
+
+footer .social-media .mdi-set {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+footer .social-media .mdi-set span {
+    font-size: 3rem;
+    margin: 0 10px;
+    transition: 0.2s ease all;
+}
+
+footer .social-media .mdi-set span:hover,
+footer .social-media .mdi-set span:target,
+footer .social-media .mdi-set span:focus {
+    cursor: pointer;
+}
+
+footer .social-media .mdi-set span.mdi-facebook:hover,
+footer .social-media .mdi-set span.mdi-facebook:target,
+footer .social-media .mdi-set span.mdi-facebook:focus {
+    color: #3B5998;
+}
+
+footer .social-media .mdi-set span.mdi-youtube:hover,
+footer .social-media .mdi-set span.mdi-youtube:target,
+footer .social-media .mdi-set span.mdi-youtube:focus {
+    color: #ff0000;
+}
+
+footer .social-media .mdi-set span.mdi-instagram:hover,
+footer .social-media .mdi-set span.mdi-instagram:target,
+footer .social-media .mdi-set span.mdi-instagram:focus {
+    color: #8134af;
+}
+
+footer .social-media .mdi-set span.mdi-twitter-circle:hover,
+footer .social-media .mdi-set span.mdi-twitter-circle:target,
+footer .social-media .mdi-set span.mdi-twitter-circle:focus {
+    color: #55acee;
+}
+
+footer .social-media .mdi-set span.mdi-pinterest:hover,
+footer .social-media .mdi-set span.mdi-pinterest:target,
+footer .social-media .mdi-set span.mdi-pinterest:focus {
+    color: #BD081C;
+}
+
+/* Footer Copyright */
+.copyright {
+    background-color: white;
+    text-align: center;
+    padding: 8px;
+}
+
+/* Footer Form*/
+footer form {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+    margin: 10px 2.5%;
+}
+
+form input {
+    padding: 10px;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+    margin: 10px;
+    width: 100%;
+    border: 2px solid #ddd;
+    transition: 0.2s ease all;
+}
+
+form input:hover,
+form input:focus,
+form input:target {
+    border-color: #0080E2;
+}
+
+form input[type="submit"] {
+    background-color: #0080E2;
+    border: 2px solid #0080E2;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 30px;
+    padding: 15px;
+    transition: 0.2s ease all;
+}
+
+form input[type="submit"]:hover,
+form input[type="submit"]:target,
+form input[type="submit"]:focus {
+    background-color: #B14913;
+    border-color: #B14913;
+    cursor: pointer;
+}
+
+#email-label {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* Navigation Search Bar */
+.navigation .nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.search form {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-right: 30px;
+    width: 200px;
+    max-width: 300px;
+}
+.search form input {
+    padding: 5px 15px;
+    border-radius: 30px;
+}
+.search form button {
+    width: 20px;
+    padding: 5px 5px 5px 0;
+    margin-left: -45px;
+    font-size: 24px;
+    color: rgb(201, 201, 201);
+    background: none;
+    border: none;
+    transition: 0.2s ease all;
+}
+
+.search form button:hover, .search form button:focus, .search form button:target {
+    color: #0080E2;
+    cursor: pointer;
+}
+
+/* End Mobile and Up Query */
+/* Start Tablet and Up Styles */
+@media only screen and (min-width: 768px) {
+
+    /* Custom Column sizing */
+    .col-12.col-sm-6 {
+        width: 50%;
+    }
+
+    .header .container {
+        justify-content: space-between;
+    }
+
+}
+
+/* End Tablet and Up Styles */
+
+/* Start Landscape Tablet and Up Styles */
+@media only screen and (min-width: 960px) {
+
+    /* Custom Column sizing */
+    .col-12.col-md-4 {
+        width: 33%;
+    }
+
+    /* Nav */
+    .nav ul#main {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+
+    .nav ul#main li {
+        padding: 20px 35px;
+    }
+
+    .nav ul#mobile,
+    a.hamburgerOpen,
+    a.hamburgerClose {
+        display: none;
+    }
+
+    .nav ul#sub {
+        display: none;
+        position: absolute;
+        margin-top: 20px;
+        max-width: 200px;
+        box-shadow: 0 0 3px rgba(0,0,0,0.2);
+        z-index: 1;
+        text-align: center;
+    }
+    
+    .nav #dropdown:hover ul#sub, .nav #dropdown:focus ul#sub, .nav #dropdown:target ul#sub, .nav #dropdown:hover ul#sub li, .nav #dropdown:focus ul#sub li, .nav #dropdown:target ul#sub li {
+        display: block;
+    }
+
+    .nav #dropdown:hover ul#sub {
+        margin-left: -35px;
+    }
+
+    /* Cards */
+    .cards .card-container a {
+        width: 31%;
+        margin: 10px 1%;
+    }
+
+}
+
+/* End Landscape Tablet and Up Styles */
+
+/* Start Desktop and Up Styles */
+@media only screen and (min-width: 1200px) {
+
+    /* Custom Column sizing */
+    .col-12.col-lg-3 {
+        width: 25%;
+    }
+
+    /* Cards */
+    .cards .card-container a {
+        width: 23%;
+        margin: 10px 1%;
+    }
+}
+
+/* End Desktop and Up Styles */
