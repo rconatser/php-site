@@ -29,7 +29,7 @@
 <section class="navigation">
     <div class="nav">
         <div class="container">
-            <ul id="main" class="menu">
+        <ul id="main" class="menu">
                 <a href="index.php">
                     <li>Home</li>
                 </a>

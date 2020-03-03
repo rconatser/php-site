@@ -10,6 +10,7 @@ console.log('Desired Item ==> ' + desiredItem);
 
 // gets all list items to manipulate -- results in an ERROR
 let getItem = document.querySelectorAll("ul.menu a li");
+let getDropdown = document.querySelectorAll("ul#sub a li");
 let getLink = document.querySelectorAll("ul.menu a");
 console.log('Got Item ==> ' + getItem);
 console.log('Got Parent ==> ' + getLink)
@@ -22,13 +23,9 @@ for(let i = 0; i <= getLink.length; i++){
 
    if(desiredItem === page){
       getItem[i].className = "active";
-      // Assigns parent list item parent class 
-      if(getItem[i].parentNode.parentNode.parentNode.querySelector("li")) {
-         getItem[i].parentNode.parentNode.parentNode.className = "parent";
-      }  else {
-         getItem[i].parentNode.parentNode.parentNode.className = "";
-      }
+      getDropdown[i].parentNode.parentNode.parentNode.className = "parent";
    } else {
         getItem[i].className="";
+        getDropdown[i].parentNode.parentNode.parentNode.className = "";
    }
 }
