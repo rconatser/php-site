@@ -196,17 +196,40 @@ a#hamburgerBtn:hover {
     width: 100%;
 }
 
-.nav ul#mobile.open li#dropdown:hover, .nav ul#mobile.open li#dropdown:focus, .nav ul#mobile.open li#dropdown:target {
-    background-color: rgb(0, 24, 46);
+.nav li#dropdown.parent ul#sub li:hover, .nav li#dropdown.parent ul#sub li:focus, .nav li#dropdown.parent ul#sub li:target {
+    background-color: #ff9d00;
+    border-color: #ff9d00;
+    color: black;
+    width: 100%;
+    margin: 0;
 }
 
-.nav ul#mobile.open ul#sub li {
+.nav li#dropdown.parent {
+    border-color: #B14913;
+    background-color: #B14913;
+}
+
+.nav li#dropdown.parent ul#sub {
+    background-color: #873408;
+}
+
+.nav li#dropdown.parent ul#sub li {
+    background-color: #873408;
+    border-color: #873408;
+}
+
+.nav li#dropdown ul#sub li {
     font-size: 18px;
 }
 
 .nav ul#mobile.open ul#sub li:before {
     content: '- ';
 }
+
+.nav ul#sub li.active {
+    background-color: #0080E2;
+}
+
 
 
 /* SLICK Custom Styles (Override) */
@@ -443,18 +466,14 @@ form input[type="submit"]:focus {
 }
 
 /* Navigation Search Bar */
-.navigation .nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-}
 .search form {
+    margin-top: -50px;
+    float:  right;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     margin-right: 30px;
-    width: 200px;
+    min-width: 200px;
     max-width: 300px;
 }
 .search form input {
@@ -498,6 +517,11 @@ form input[type="submit"]:focus {
         max-width: 175px;
     }
 
+    /* Navigation Search Bar */
+    .search form {
+        margin-top: -60px;
+    }
+
 }
 
 /* End Tablet and Up Styles */
@@ -526,8 +550,10 @@ form input[type="submit"]:focus {
     .nav ul#main {
         display: flex;
         justify-content: flex-start;
-        flex-wrap: wrap;
         list-style: none;
+        padding:  0;
+        margin:  0;
+        margin-bottom: -2px;
     }
 
     .nav ul#main li {
@@ -543,7 +569,7 @@ form input[type="submit"]:focus {
     .nav ul#sub {
         display: none;
         position: absolute;
-        margin-top: 20px;
+        margin-top: 24px;
         max-width: 200px;
         box-shadow: 0 0 3px rgba(0,0,0,0.2);
         z-index: 1;
@@ -554,8 +580,9 @@ form input[type="submit"]:focus {
         display: block;
     }
 
-    .nav #dropdown:hover ul#sub {
+    .nav #dropdown:hover ul#sub, .nav #dropdown:focus ul#sub, .nav #dropdown:target ul#sub {
         margin-left: -35px;
+        margin-top: 22px;
     }
 
     /* Cards */

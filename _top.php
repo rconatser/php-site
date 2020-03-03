@@ -38,8 +38,8 @@
                 </a>
                 <li id="dropdown">Agents <i class="fa fa-chevron-down" aria-hidden="true"></i>
                     <ul id="sub" class="menu">
-                        <a href="#"><li>Item One</li></a>
-                        <a href="#"><li>Item Two</li></a>
+                        <a href="ashley.php"><li>Ashley Roberts</li></a>
+                        <a href="daniel.php"><li>Daniel Bailey</li></a>
                     </ul>
                 </li>
                 <a href="book.php">
@@ -56,8 +56,8 @@
                 </a>
                 <li id="dropdown">Agents <i class="fa fa-chevron-down" aria-hidden="true"></i>
                     <ul id="sub" class="menu">
-                        <a href="#"><li>Item One</li></a>
-                        <a href="#"><li>Item Two</li></a>
+                        <a href="ashley.php"><li>Ashley Roberts</li></a>
+                        <a href="daniel.php"><li>Daniel Bailey</li></a>
                     </ul>
                 </li>
                 <a href="book.php">
