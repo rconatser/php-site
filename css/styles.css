@@ -226,10 +226,9 @@ a#hamburgerBtn:hover {
     content: '- ';
 }
 
-.nav ul#sub li.active {
-    background-color: #0080E2;
+.nav li#dropdown ul#sub a li.active {
+    border-bottom-color: #ff9d00;
 }
-
 
 
 /* SLICK Custom Styles (Override) */

@@ -47,7 +47,7 @@
                 </a>
             </ul>
             <ul id="mobile" class="menu">
-                <a id="hamburgerBtn" class="" href="#"></a>
+                <a id="hamburgerBtn" href="#"></a>
                 <a href="index.php">
                     <li>Home</li>
                 </a>
