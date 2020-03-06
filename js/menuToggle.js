@@ -3,7 +3,7 @@
 
 function toggleMenu() {
    document.getElementById("hamburgerBtn").classList.toggle("open");
-   document.getElementById("mobile").classList.toggle("open");
+   document.getElementById("main").classList.toggle("open");
 }
 var x = document.getElementById('hamburgerBtn');
 x.onclick = toggleMenu; 

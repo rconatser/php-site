@@ -82,6 +82,18 @@ a:target {
     clear: both;
 }
 
+.padding-bottom-60 {
+    padding-bottom: 60px;
+}
+
+.padding-60 {
+    padding: 60px 0;
+}
+
+.padding-40 {
+    padding: 40px 0;
+}
+
 /* Header Styles */
 .header .container {
     background-color: white;
@@ -101,15 +113,20 @@ a:target {
     max-width: 250px;
 }
 
+.header-sub h1 {
+    font-size: 48px;
+    font-family: 'Kristi', sans-serif;
+    color: #0080E2;
+    border-bottom: 2px solid #0080E2;
+    width: 95%;
+    margin: 40px 2.5%;
+}
+
 
 /* Nav */
 .nav li#dropdown .fa-chevron-down {
     font-size: 1.25rem;
     padding-left: 5px;
-}
-
-.nav ul#main {
-    display: none;
 }
 
 .nav, .nav ul#sub {
@@ -126,22 +143,19 @@ a:target {
 .nav li {
     color: white;
     font-weight: 300;
-    border-bottom: 4px solid rgb(0, 24, 46);
-    border-top: 4px solid rgb(0, 24, 46);
 }
 
 .nav li:hover,
 .nav li:focus,
 .nav li:target {
-    background-color: #0080E2;
-    border-color: #0080E2;
+    color: #ff9d00;
 }
 
 .nav li.active {
-    border-bottom-color: #0080E2;
+    color: #0080E2;
 }
 
-.nav ul#mobile {
+.nav ul#main {
     background-color: rgb(0, 24, 46);
     font-family: 'Open Sans', sans-serif;
     overflow: hidden;
@@ -161,7 +175,7 @@ a#hamburgerBtn {
     transition: .1s ease-in-out all;
 }
 
-.nav ul#mobile li {
+.nav ul#main li {
     display: none;
 }
 
@@ -169,7 +183,7 @@ a#hamburgerBtn:hover {
     cursor: pointer;
 }
 
-.nav ul#mobile.open {
+.nav ul#main.open {
     position: fixed;
     top: 0;
     width: 100%;
@@ -178,44 +192,30 @@ a#hamburgerBtn:hover {
     overflow: hidden;
 }
 
-.nav ul#mobile.open #hamburgerBtn {
+.nav ul#main.open #hamburgerBtn {
     transform: rotate(90deg);
     background-image: url("../images/close.png");
 }
 
-.nav ul#mobile.open li {
+.nav ul#main.open li {
     display: block;
     text-align: center;
     padding: 15px;
     font-size: 24px;
 }
 
-.nav ul#mobile.open #dropdown {
+.nav ul#main.open #dropdown {
     padding: 15px 0 0;
     margin: 0;
     width: 100%;
 }
 
 .nav li#dropdown.parent ul#sub li:hover, .nav li#dropdown.parent ul#sub li:focus, .nav li#dropdown.parent ul#sub li:target {
-    background-color: #ff9d00;
-    border-color: #ff9d00;
-    color: black;
-    width: 100%;
-    margin: 0;
+    color: #ff9d00;
 }
 
 .nav li#dropdown.parent {
-    border-color: #B14913;
-    background-color: #B14913;
-}
-
-.nav li#dropdown.parent ul#sub {
-    background-color: #873408;
-}
-
-.nav li#dropdown.parent ul#sub li {
-    background-color: #873408;
-    border-color: #873408;
+    color: #B14913;
 }
 
 .nav li#dropdown ul#sub li {
@@ -328,7 +328,44 @@ a#hamburgerBtn:hover {
     font-size: 20px;
 }
 
+/* CRUISES CARD STYLES */
+div.cruise-card {
+box-shadow: 0 0 3px rgba(0,0,0,.25);
+width: 90%;
+margin: 20px 5%;
+overflow: hidden;
+}
 
+div.cruise-card div.cruise-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 350px;
+}
+
+div.cruise-card div.cruise-title {
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+div.cruise-card div.cruise-content {
+    padding: 20px;
+}
+
+div.cruise-card div.cruise-content a {
+    width: 100%;
+    margin-top: 20px;
+    display: block;
+    border-radius: 30px;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    background-color: #0080E2;
+    transition: 0.2s ease all;
+}
+div.cruise-card div.cruise-content a:hover, div.cruise-card div.cruise-content a:focus, div.cruise-card div.cruise-content a:target {
+    background-color: #B14913;
+}
 /* Footer Styles */
 footer {
     background-color: #D6EDF8;
@@ -418,7 +455,7 @@ footer form {
     margin: 10px 2.5%;
 }
 
-form input {
+form input, form select {
     padding: 10px;
     font-family: 'Raleway', sans-serif;
     letter-spacing: 1px;
@@ -430,7 +467,10 @@ form input {
 
 form input:hover,
 form input:focus,
-form input:target {
+form input:target,
+form select:hover,
+form select:focus,
+form select:target {
     border-color: #0080E2;
 }
 
@@ -499,6 +539,57 @@ form input[type="submit"]:focus {
     cursor: pointer;
 }
 
+/* BOOK A CRUISE FORM */
+form#book {
+    width: 90%;
+    margin: 0 5%;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+form#book label {
+    padding-left: 10px;
+}
+
+form#book label span {
+    color: red;
+    font-weight: bold;
+}
+
+form#book div {
+    width: 100%;
+    margin: 10px 0;
+}
+
+form#book input[type="submit"] {
+    margin-top: 20px;
+}
+
+div.agent-img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+div.agent-img img {
+    width: 90%;
+    margin: 0 5%;
+    border-radius: 100%;
+    box-shadow: 0 0 4px rgba(0,0,0,.25);
+}
+
+.agent-content {
+    padding: 0 20px;
+    padding-bottom: 60px;
+}
+
+.agent-content h3 {
+    margin-top: 20px;
+}
+
+.agent-content h3:first-child {
+    margin-top: 0;
+}
 /* End Mobile and Up Query */
 /* Start Tablet and Up Styles */
 @media only screen and (min-width: 768px) {
@@ -516,10 +607,33 @@ form input[type="submit"]:focus {
         max-width: 175px;
     }
 
-    /* Navigation Search Bar */
-    .search form {
-        margin-top: -60px;
+
+    /* CRUISE CARD STYLES */
+    div.cruise-card {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
     }
+    div.cruise-card div.cruise-content {
+        display: flex;
+        flex-direction: column;
+    }
+    div.cruise-card div.cruise-content a {
+        width: 50%;
+        float: right;
+    }
+    div.cruise-card div.cruise-img img {
+        width: 300px;
+        height: 100%;
+    }
+
+    /* AGENT PAGES */
+    div.agent-img {
+        float: right;
+        width: 50%;
+    }
+
+
 
 }
 
@@ -556,12 +670,26 @@ form input[type="submit"]:focus {
     }
 
     .nav ul#main li {
+        display: inline-block;
         padding: 20px 35px;
+        color: white;
+        font-weight: 300;
+        border-bottom: 4px solid rgb(0, 24, 46);
+        border-top: 4px solid rgb(0, 24, 46);
     }
 
-    .nav ul#mobile,
-    a.hamburgerOpen,
-    a.hamburgerClose {
+    .nav  ul#main li:hover,
+    .nav  ul#main li:focus,
+    .nav  ul#main li:target {
+        background-color: #0080E2;
+        border-color: #0080E2;
+    }
+
+    .nav  ul#main li.active {
+        border-bottom-color: #0080E2;
+    }
+
+    a#hamburgerBtn {
         display: none;
     }
 
@@ -579,9 +707,37 @@ form input[type="submit"]:focus {
         display: block;
     }
 
+    .nav li#dropdown.parent ul#sub li:hover, .nav li#dropdown.parent ul#sub li:focus, .nav li#dropdown.parent ul#sub li:target {
+        background-color: #ff9d00;
+        border-color: #ff9d00;
+        color: black;
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav li#dropdown.parent {
+        border-color: #B14913;
+        background-color: #B14913;
+        color: white;
+    }
+
+    .nav li#dropdown.parent ul#sub {
+        background-color: #873408;
+    }
+    
+    .nav li#dropdown.parent ul#sub li {
+        background-color: #873408;
+        border-color: #873408;
+    }
+
     .nav #dropdown:hover ul#sub, .nav #dropdown:focus ul#sub, .nav #dropdown:target ul#sub {
         margin-left: -35px;
         margin-top: 22px;
+    }
+
+    /* Navigation Search Bar */
+    .search form {
+        margin-top: -60px;
     }
 
     /* Cards */
@@ -590,8 +746,29 @@ form input[type="submit"]:focus {
         margin: 10px 1%;
     }
 
+    /* CRUISE CARD STYLES */
+    div.cruise-card div.cruise-content a {
+        width: 30%;
+    }
+
+    /* CRUISE SELECT FORM */
+    form#book div {
+    width: 45%;
+    margin: 10px 2.5%;
 }
 
+form#book input[type="submit"] {
+    width: auto;
+    padding: 15px 45px;
+    margin-top: 20px;
+    margin-left: 2.5%;
+}
+
+/* AGENT PAGES */
+    div.agent-img {
+        width: 40%;
+    }
+}
 /* End Landscape Tablet and Up Styles */
 
 /* Start Desktop and Up Styles */
@@ -606,6 +783,11 @@ form input[type="submit"]:focus {
     .cards .card-container a {
         width: 23%;
         margin: 10px 1%;
+    }
+
+    /* CRUISE CARD STYLES */
+    div.cruise-card div.cruise-content a {
+        width: 20%;
     }
 }
 

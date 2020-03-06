@@ -30,24 +30,7 @@
     <div class="nav">
         <div class="container">
         <ul id="main" class="menu">
-                <a href="index.php">
-                    <li>Home</li>
-                </a>
-                <a href="cruises.php">
-                    <li>Cruises</li>
-                </a>
-                <li id="dropdown">Agents <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                    <ul id="sub" class="menu">
-                        <a href="ashley.php"><li>Ashley Roberts</li></a>
-                        <a href="daniel.php"><li>Daniel Bailey</li></a>
-                    </ul>
-                </li>
-                <a href="book.php">
-                    <li>Book</li>
-                </a>
-            </ul>
-            <ul id="mobile" class="menu">
-                <a id="hamburgerBtn" href="#"></a>
+            <a id="hamburgerBtn" href="#"></a>
                 <a href="index.php">
                     <li>Home</li>
                 </a>
